@@ -25,7 +25,6 @@
         </div>
         <div class="navbar-buttons">
             <a href="#home-section"><button>Home</button></a>
-            <a href="#stack-section"><button>Stack Tecnológico</button></a>
             <a href="#quienes-section"><button>Quiénes somos</button></a>
             <a href="#experiencia-section"><button>Experiencia</button></a>
             <a href="#valores-section"><button>Valores</button></a>
@@ -44,21 +43,20 @@
         <div class="section-divisor-header">
             <hr class="section-divisor-hr">
             <h2 class="section-divisor-title">VALORES</h2>
+                        <h3 style="color:#0078d4;font-size:1.08rem;font-weight:500;margin-top:0.5rem;max-width:900px;">
+                            El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.
+                        </h3>
         </div>
         <div class="section-container" id="valores-cards"></div>
     </section>
 
-    <section id="stack-section" class="section-divisor">
-        <div class="section-divisor-header">
-            <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">STACK</h2>
-        </div>
-        <div class="section-container" id="stack-cards"></div>
-    </section>
     <section id="quienes-section" class="section-divisor">
         <div class="section-divisor-header">
             <hr class="section-divisor-hr">
             <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
+            <h3 style="color:#0078d4;font-size:1.15rem;font-weight:500;margin-top:0.5rem;max-width:900px;">Nuestra
+                experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
+                independiente nacida en Fuerteventura.</h3>
         </div>
         <div class="section-container" id="equipo-cards"></div>
     </section>
@@ -75,22 +73,6 @@
         <div class="footer-row" style="justify-content:space-between; width:100%;">
             <div style="display:flex;align-items:center;gap:1.2rem;">
                 <span id="empresa-nombre-footer" class="footer-company"></span>
-                <a href="https://www.instagram.com/" target="_blank" class="footer-icon" title="Instagram">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
-                        style="width:28px;height:28px;">
-                </a>
-                <a href="https://www.facebook.com/" target="_blank" class="footer-icon" title="Facebook">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"
-                        style="width:28px;height:28px;">
-                </a>
-                <a href="https://twitter.com/" target="_blank" class="footer-icon" title="Twitter">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"
-                        style="width:28px;height:28px;">
-                </a>
-                <a href="https://www.tiktok.com/" target="_blank" class="footer-icon" title="TikTok">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"
-                        style="width:28px;height:28px;">
-                </a>
             </div>
             <div class="footer-address" style="text-align:right;font-size:0.98rem;color:#e6faff;max-width:320px;">
                 <div class="footer-contact" style="margin-bottom:0.7rem; text-align:left;">
@@ -121,7 +103,7 @@
             </div>
         </div>
     </footer>
-    <script src="stack.js"></script>
+
     <script src="clientes.js"></script>
     <script src="servicios.js"></script>
     <script src="equipo.js"></script>
@@ -141,7 +123,7 @@
                 navButtons.classList.toggle('active');
             });
             // Cerrar menú al hacer clic fuera
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!navButtons.contains(e.target) && e.target !== hamburger) {
                     navButtons.classList.remove('active');
                 }
