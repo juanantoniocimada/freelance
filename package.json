@@ -1,0 +1,12 @@
+{
+  "name": "freelance",
+  "version": "1.0.0",
+  "description": "Portfolio freelance web",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 8080"
+  },
+  "author": "juanantoniocimada",
+  "license": "MIT",
+  "devDependencies": {}
+}
