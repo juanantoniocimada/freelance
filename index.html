@@ -1,1 +1,141 @@
-<!-- Proyecto principal -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        fuertesoft - Desarrollo de Software
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+
+            <span style="display:flex;align-items:center;gap:10px;">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="vertical-align:middle;">
+                    <path d="M4 20 Q8 10 16 20 T28 20" stroke="#0093E9" stroke-width="2.5" fill="none" />
+                </svg>
+                <span id="empresa-nombre-navbar" class="empresa-nombre-navbar" style="margin-left:4px;"></span>
+            </span>
+        </div>
+        <div class="navbar-buttons">
+            <a href="#home-section"><button>Home</button></a>
+            <a href="#quienes-section"><button>Quiénes somos</button></a>
+            <a href="#experiencia-section"><button>Experiencia</button></a>
+            <a href="#valores-section"><button>Valores</button></a>
+        </div>
+    </nav>
+
+    <section id="home-section" class="section-divisor">
+        <div class="section-divisor-header">
+            <hr class="section-divisor-hr">
+            <h2 class="section-divisor-title">HOME</h2>
+        </div>
+        <div class="section-container" id="servicios-cards"></div>
+    </section>
+
+    <section id="valores-section" class="section-divisor">
+        <div class="section-divisor-header">
+            <hr class="section-divisor-hr">
+            <h2 class="section-divisor-title">VALORES</h2>
+                        <h3 style="color:#0078d4;font-size:1.08rem;font-weight:500;margin-top:0.5rem;max-width:900px;">
+                            El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.
+                        </h3>
+        </div>
+        <div class="section-container" id="valores-cards"></div>
+    </section>
+
+    <section id="quienes-section" class="section-divisor">
+        <div class="section-divisor-header">
+            <hr class="section-divisor-hr">
+            <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
+            <h3 style="color:#0078d4;font-size:1.15rem;font-weight:500;margin-top:0.5rem;max-width:900px;">Nuestra
+                experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
+                independiente nacida en Fuerteventura.</h3>
+        </div>
+        <div class="section-container" id="equipo-cards"></div>
+    </section>
+    <section id="experiencia-section" class="section-divisor">
+        <div class="section-divisor-header">
+            <hr class="section-divisor-hr">
+            <h2 class="section-divisor-title">EXPERIENCIA</h2>
+        </div>
+        <div class="section-container" id="clientes-cards"></div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-row" style="justify-content:space-between; width:100%;">
+            <div style="display:flex;align-items:center;gap:1.2rem;">
+                <span id="empresa-nombre-footer" class="footer-company"></span>
+            </div>
+            <div class="footer-address" style="text-align:right;font-size:0.98rem;color:#e6faff;max-width:320px;">
+                <div class="footer-contact" style="margin-bottom:0.7rem; text-align:left;">
+                    <strong style="font-size:1.08rem;color:#b3e0ff;letter-spacing:1px;">Contacto</strong><br>
+
+                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Dirección"
+                            style="width:18px;height:18px;vertical-align:middle;"> AV JUAN DE BETHENCOURT EDI ARNAU-A 83
+                        2 B
+                    </span>
+                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Ciudad"
+                            style="width:18px;height:18px;vertical-align:middle;"> 35600 - Puerto del Rosario (Las
+                        Palmas)
+                    </span>
+                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Teléfono"
+                            style="width:18px;height:18px;vertical-align:middle;"> <a href="tel:608345295"
+                            style="color:#b3e0ff;text-decoration:none;">608 345 295</a>
+                    </span>
+                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"
+                            style="width:18px;height:18px;vertical-align:middle;"> <a
+                            href="mailto:juanantonio.cimada@gmail.com"
+                            style="color:#b3e0ff;text-decoration:underline;">juanantonio.cimada@gmail.com</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="clientes.js"></script>
+    <script src="servicios.js"></script>
+    <script src="equipo.js"></script>
+    <script src="valores.js"></script>
+    <script>
+        // Nombre de la empresa centralizado
+        const EMPRESA_NOMBRE = "fuertesoft";
+        document.getElementById("empresa-nombre-navbar").textContent = EMPRESA_NOMBRE;
+        document.getElementById("empresa-nombre-footer").textContent = EMPRESA_NOMBRE;
+
+        // Menú hamburguesa para móvil
+        const hamburger = document.getElementById('navbar-hamburger');
+        const navButtons = document.getElementById('navbar-buttons');
+        if (hamburger && navButtons) {
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navButtons.classList.toggle('active');
+            });
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', function (e) {
+                if (!navButtons.contains(e.target) && e.target !== hamburger) {
+                    navButtons.classList.remove('active');
+                }
+            });
+            // Cerrar menú al seleccionar opción
+            Array.from(navButtons.querySelectorAll('a')).forEach(a => {
+                a.addEventListener('click', () => {
+                    navButtons.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
