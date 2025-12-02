@@ -2,17 +2,15 @@
 const equipo = [
   {
     nombre: "Juan Antonio Durán",
-    rol: "Arquitecto de software y lead app",
+    rol: "Software Architect and Lead App",
     img: "img/juan.jpeg",
     linkedin: "https://www.linkedin.com/in/juanantoniomkt/",
-    destacado: true
   },
   {
     nombre: "Javi",
-    rol: "Desarrollador fullstack",
+    rol: "Fullstack Developer",
     img: "img/javi.jpeg",
     linkedin: "https://www.linkedin.com/in/jjavier-illesca/",
-    destacado: false
   },
 ];
 
@@ -20,8 +18,7 @@ function renderEquipo() {
   const container = document.getElementById("equipo-cards");
   if (!container) return;
   container.innerHTML = equipo.map(m => `
-    <div class="client-card${m.destacado ? ' destacado' : ''}">
-      <span class="badge-fundador">${m.destacado ? 'Fundador' : 'Miembro'}</span>
+    <div class="client-card">
       <img src="${m.img}" alt="${m.nombre}">
       <h3 class="fundador-nombre">${m.nombre}</h3>
       <p class="fundador-desc">${m.rol}</p>

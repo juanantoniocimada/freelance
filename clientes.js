@@ -43,26 +43,14 @@ function renderClientesCards() {
   container.innerHTML = '';
   clientes.forEach(cliente => {
     let card = document.createElement('div');
-    card.className = 'client-card' + (cliente.destacado ? ' destacado' : '');
-    card.style.padding = '2rem 1.5rem';
-    if (cliente.destacado) {
-      card.innerHTML = `
-        <span class="badge-fundador">Fundador</span>
-        <img src="${cliente.logo}" alt="${cliente.nombre}">
-        <h3 class="fundador-nombre">${cliente.nombre}</h3>
-        <p class="fundador-desc">${cliente.descripcion}</p>
-        <a href="${cliente.linkedin}" target="_blank" class="linkedin-btn">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon"> LinkedIn
-        </a>
-      `;
-    } else {
-      card.innerHTML = `
-        <img src="${cliente.logo}" alt="${cliente.nombre} logo">
-        <h3>${cliente.nombre}</h3>
-        <p>${cliente.descripcion}</p>
-      `;
-    }
-    container.appendChild(card);
+    card.className = 'client-card';
+    card.innerHTML = `
+    <img src="${cliente.logo}" alt="${cliente.nombre} logo">
+    <h3>${cliente.nombre}</h3>
+    <p>${cliente.descripcion}</p>
+`;
+
+container.appendChild(card);
   });
 }
 

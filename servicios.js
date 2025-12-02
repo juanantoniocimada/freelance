@@ -1,23 +1,15 @@
 // Array de servicios
 const servicios = [
     {
-        titulo: '¿Tienes una idea?',
-        img: 'https://cdn-icons-png.flaticon.com/512/1828/1828926.png',
-        descripcion: '',
-        items: [
-            "¿Crees que tienes una idea de app que pueda revolucionar el mercado? Te podemos guiar en el proceso a nivel técnico"
-        ]
-    },
-
-    {
         titulo: 'Aplicaciones iOS y Android',
-        img: 'https://www.zitelia.es/wp-content/uploads/2017/08/app-movil.jpg',
-        descripcion: 'Desarrollo de aplicaciones móviles nativas y multiplataforma para empresas y equipos profesionales.',
+        img: 'https://www.wingsoft.com/_next/image?url=https%3A%2F%2Fapolo-api.lab.wingsoft.com%2Fapolo-prod%2Fcbeb5722-585f-4008-b09f-44b1b15648761723241028263-cuadradas%20wingsoft%20(1)-compressed%20(1).jpg&w=3840&q=75',
+        descripcion: 'Desarrollo de aplicaciones móviles para empresas y organizaciones desde la idea hasta la publicación.',
         items: [
             "notificaciones a usuarios",
             "áreas privadas",
             "integración con mapas y geolocalización",
             "integracion con sistemas de pago / qr / nfc",
+            "panel backoffice para gestión de contenidos",
         ]
     },
     {
@@ -29,6 +21,8 @@ const servicios = [
             "sistemas de gestión interna",
             "automatización de procesos manuales",
             "integración con sistemas terceros",
+            "aplicaciones web",
+            "sistemas de reservas y comercio electrónico",
         ]
     },
     {
@@ -76,6 +70,17 @@ const servicios = [
 
         ]
     },
+    {
+        titulo: '¿Tienes una idea?',
+        img: 'https://cdn-icons-png.flaticon.com/512/1828/1828926.png',
+        descripcion: 'Te podemos acompañamos en el proceso a nivel técnico',
+        items: [
+            "elección de tecnología",
+            "viabilidad técnica",
+            "prototipado rápido",
+            "desarrollo ágil",  
+        ]
+    },
 
 ];
 
@@ -83,22 +88,43 @@ function renderServiciosCards() {
     const container = document.getElementById('servicios-cards');
     if (!container) return;
     container.innerHTML = '';
-    servicios.forEach(servicio => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.style.padding = '2rem 1.5rem';
-                card.innerHTML = `
+    servicios.forEach((servicio, idx) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.style.padding = '2rem 1.5rem';
+        card.style.background = '#fff';
+        card.style.border = '1px solid #e0e0e0';
+        card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.07)';
+        const itemsId = `servicio-items-${idx}`;
+        card.innerHTML = `
             <img src="${servicio.img}" alt="${servicio.titulo}">
             <h2>${servicio.titulo}</h2>
             <p>${servicio.descripcion}</p>
-            <ul style="list-style:none;padding:0;margin:0 0 1.2rem 0;">
+            <button class="ver-mas-btn" id="ver-mas-btn-${idx}">Ver más</button>
+            <ul id="${itemsId}" style="list-style:none;padding:0;margin:0 0 0.2rem 0;display:none;">
                 ${servicio.items.map(item => `
-                    <li style='margin-bottom:1.1rem;font-size:1.04rem;color:#225;padding:0.4rem 0.7rem;background:#f7fafc;border-left:2px solid #b3e0ff;border-radius:6px;'>
-                        ${item}
-                    </li>`).join("")}
+                    <li style='margin-bottom:0.12rem;font-size:0.98rem;color:#225;font-weight:500;padding:0.4rem 0.7rem;background:#f7fafc;border-left:2px solid #b3e0ff;border-radius:0px;'>${item}</li>`).join("")}
             </ul>
         `;
         container.appendChild(card);
+        // Destello al pulsar el botón
+        setTimeout(() => {
+            const btn = document.getElementById(`ver-mas-btn-${idx}`);
+            if (btn) {
+                btn.onclick = function() {
+                    const ul = document.getElementById(itemsId);
+                    const isHidden = ul.style.display === 'none';
+                    ul.style.display = isHidden ? 'block' : 'none';
+                    if (isHidden) {
+                        card.style.transition = 'background 0.4s';
+                        card.style.background = '#e0f7fa';
+                        setTimeout(() => {
+                            card.style.background = '#fff';
+                        }, 1000);
+                    }
+                };
+            }
+        }, 0);
     });
 }
 

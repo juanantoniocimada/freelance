@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        fuertesoft - Desarrollo de Software
+        FUERTESOFT - DESARROLLO DE SOFTWARE EN FUERTEVENTURA
     </title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,29 +15,26 @@
     <nav class="navbar">
         <div class="navbar-logo">
             <span style="display:flex;align-items:center;gap:10px;">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    style="vertical-align:middle;">
-                    <path d="M4 20 Q8 10 16 20 T28 20" stroke="#0093E9" stroke-width="2.5" fill="none" />
-                </svg>
+
                 <span id="empresa-nombre-navbar" class="empresa-nombre-navbar" style="margin-left:4px;"></span>
-            </span>
+
+            </span> 
         </div>
         <div class="navbar-buttons">
             <a href="#home-section"><button>Home</button></a>
             <a href="#quienes-section"><button>Quiénes somos</button></a>
             <a href="#experiencia-section"><button>Experiencia</button></a>
-            <a href="#valores-section"><button>Valores</button></a>
+            <a href="#valores-section"><button>Cómo trabajamos</button></a>
         </div>
     </nav>
+    
     <div class="spacer-navbar"></div>
 
     <section id="quienes-section" class="section-divisor">
         <div class="section-divisor-header">
             <hr class="section-divisor-hr">
             <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
-            <h3 style="color:#0078d4;font-size:1.15rem;font-weight:500;margin-top:0.5rem;max-width:900px;">Nuestra
-                experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
-                independiente nacida en Fuerteventura.</h3>
+            <h3>Nuestra experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa independiente nacida en Fuerteventura.</h3>
         </div>
         <div class="section-container" id="equipo-cards"></div>
     </section>
@@ -53,10 +50,8 @@
     <section id="valores-section" class="section-divisor">
         <div class="section-divisor-header">
             <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">VALORES</h2>
-                        <h3 style="color:#0078d4;font-size:1.08rem;font-weight:500;margin-top:0.5rem;max-width:900px;">
-                            El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.
-                        </h3>
+            <h2 class="section-divisor-title">Cómo trabajamos</h2>
+                        <h3>El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.</h3>
         </div>
         <div class="section-container" id="valores-cards"></div>
     </section>
@@ -110,19 +105,12 @@
     <script src="equipo.js"></script>
     <script src="valores.js"></script>
     <script>
+
         // Nombre de la empresa centralizado
         const EMPRESA_NOMBRE = "fuertesoft";
         document.getElementById("empresa-nombre-navbar").textContent = EMPRESA_NOMBRE;
         document.getElementById("empresa-nombre-footer").textContent = EMPRESA_NOMBRE;
 
-        // Menú hamburguesa funcional
-        const hamburger = document.getElementById('navbar-hamburger');
-        const navButtons = document.querySelector('.navbar-buttons');
-        if (hamburger && navButtons) {
-            hamburger.addEventListener('click', () => {
-                navButtons.classList.toggle('active');
-            });
-        }
     </script>
 </body>
 
