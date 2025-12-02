@@ -1,16 +1,18 @@
 // Miembros del equipo
 const equipo = [
   {
-    nombre: "Isabel López",
-    rol: "Licenciada en informática y technical lead",
-    img: "https://softibus.com/hola/isa.jpeg",
-  },
-  {
     nombre: "Juan Antonio Durán",
     rol: "Arquitecto de software y lead app",
-    img: "https://media.licdn.com/dms/image/v2/C4D03AQHVYj5SHG9d-A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1616097123400?e=1766016000&v=beta&t=_nUbcRHlH_FGMCg6olZ1sXHk7VKfecUX58PNDEsbIOM",
+    img: "img/juan.jpeg",
     linkedin: "https://www.linkedin.com/in/juanantoniomkt/",
     destacado: true
+  },
+  {
+    nombre: "Javi",
+    rol: "Desarrollador fullstack",
+    img: "img/javi.jpeg",
+    linkedin: "https://www.linkedin.com/in/jjavier-illesca/",
+    destacado: false
   },
 ];
 

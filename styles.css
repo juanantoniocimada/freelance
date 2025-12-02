@@ -1,38 +1,85 @@
-/* Navbar hamburguesa para móvil */
-.navbar-hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #0078d4;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: 8px;
-    z-index: 101;
-}
-
 @media (max-width: 700px) {
     .navbar-buttons {
-        display: none;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        width: 100% !important;
+        margin-top: 0.18rem !important;
+    }
+    .navbar-buttons button,
+    .navbar-buttons a > button {
+        width: 50% !important;
+        min-width: 90px !important;
+        max-width: 180px !important;
+        font-size: 0.82rem !important;
+        padding: 0.32rem 0.1rem !important;
+        border-radius: 7px !important;
+        margin: 0 !important;
+        min-height: 28px !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+/* --- FOOTER RESPONSIVO --- */
+@media (max-width: 700px) {
+    .footer-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.2rem !important;
+        width: 100% !important;
+    }
+    .footer-company {
+        font-size: 1.08rem !important;
+        margin-bottom: 0.7rem !important;
+    }
+    .footer-address {
+        text-align: left !important;
+        font-size: 0.98rem !important;
+        max-width: 100% !important;
+        color: #e6faff !important;
+        margin-top: 0.5rem !important;
+    }
+    .footer-contact {
+        margin-bottom: 0.7rem !important;
+        text-align: left !important;
+    }
+    .footer {
+        padding: 1.2rem 0.7rem !important;
+        font-size: 0.98rem !important;
+    }
+}
+@media (max-width: 700px) {
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 0.5rem;
+        min-height: 56px;
+    }
+    .navbar-logo {
+        margin-bottom: 0.7rem;
+        font-size: 1.1rem;
+    }
+    .navbar-buttons {
         width: 100%;
-        background: #fff;
-        position: absolute;
-        top: 56px;
-        left: 0;
-        box-shadow: 0 4px 16px rgba(0, 147, 233, 0.10);
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        padding: 1rem 0;
+        flex-direction: column;
+        gap: 0.18rem;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-top: 0.3rem;
     }
-    .navbar-buttons.active {
-        display: flex;
-    }
-    .navbar-hamburger {
+    .navbar-buttons a {
+        width: 100%;
         display: block;
     }
-    .navbar {
-        position: relative;
+    .navbar button {
+        margin: 2px 0;
+        width: 100%;
+        font-size: 0.92rem;
+        padding: 0.45rem 0.1rem;
+        border-radius: 9px;
     }
 }
 /* Logo moderno en el navbar */
@@ -68,7 +115,7 @@ body {
 
 .navbar {
     width: 100%;
-    background: linear-gradient(90deg, #001a33 0%, #003366 50%, #005fa3 100%);
+    background: linear-gradient(90deg, #0078d4 0%, #00c6fb 50%, #0078d4 100%);
     box-shadow: 0 4px 16px rgba(0, 147, 233, 0.10);
     padding: 1.3rem 0;
     display: flex;
@@ -289,22 +336,12 @@ body {
     box-shadow: 0 1px 4px rgba(0,147,233,0.10);
     margin-top: 0.2rem;
 }
-@media (max-width: 600px) {
-    .footer {
-        font-size: 0.98rem;
-        padding: 1.2rem 0 0.8rem 0;
-        gap: 0.4rem;
-    }
-    .footer .footer-row {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.98rem;
-    }
-    .footer .footer-company {
-        font-size: 1rem;
-        padding: 0.2rem 0.5rem;
-    }
-}
 
+h3 {
+    color: #0078d4;
+    margin-bottom: 0.5rem;
+    padding: 20px;
+}
 
 .linkedin-btn {
     color: #0077B5;

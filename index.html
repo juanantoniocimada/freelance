@@ -14,7 +14,6 @@
 
     <nav class="navbar">
         <div class="navbar-logo">
-
             <span style="display:flex;align-items:center;gap:10px;">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                     style="vertical-align:middle;">
@@ -30,6 +29,18 @@
             <a href="#valores-section"><button>Valores</button></a>
         </div>
     </nav>
+    <div class="spacer-navbar"></div>
+
+    <section id="quienes-section" class="section-divisor">
+        <div class="section-divisor-header">
+            <hr class="section-divisor-hr">
+            <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
+            <h3 style="color:#0078d4;font-size:1.15rem;font-weight:500;margin-top:0.5rem;max-width:900px;">Nuestra
+                experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
+                independiente nacida en Fuerteventura.</h3>
+        </div>
+        <div class="section-container" id="equipo-cards"></div>
+    </section>
 
     <section id="home-section" class="section-divisor">
         <div class="section-divisor-header">
@@ -50,16 +61,6 @@
         <div class="section-container" id="valores-cards"></div>
     </section>
 
-    <section id="quienes-section" class="section-divisor">
-        <div class="section-divisor-header">
-            <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
-            <h3 style="color:#0078d4;font-size:1.15rem;font-weight:500;margin-top:0.5rem;max-width:900px;">Nuestra
-                experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
-                independiente nacida en Fuerteventura.</h3>
-        </div>
-        <div class="section-container" id="equipo-cards"></div>
-    </section>
     <section id="experiencia-section" class="section-divisor">
         <div class="section-divisor-header">
             <hr class="section-divisor-hr">
@@ -114,25 +115,12 @@
         document.getElementById("empresa-nombre-navbar").textContent = EMPRESA_NOMBRE;
         document.getElementById("empresa-nombre-footer").textContent = EMPRESA_NOMBRE;
 
-        // Menú hamburguesa para móvil
+        // Menú hamburguesa funcional
         const hamburger = document.getElementById('navbar-hamburger');
-        const navButtons = document.getElementById('navbar-buttons');
+        const navButtons = document.querySelector('.navbar-buttons');
         if (hamburger && navButtons) {
-            hamburger.addEventListener('click', (e) => {
-                e.stopPropagation();
+            hamburger.addEventListener('click', () => {
                 navButtons.classList.toggle('active');
-            });
-            // Cerrar menú al hacer clic fuera
-            document.addEventListener('click', function (e) {
-                if (!navButtons.contains(e.target) && e.target !== hamburger) {
-                    navButtons.classList.remove('active');
-                }
-            });
-            // Cerrar menú al seleccionar opción
-            Array.from(navButtons.querySelectorAll('a')).forEach(a => {
-                a.addEventListener('click', () => {
-                    navButtons.classList.remove('active');
-                });
             });
         }
     </script>

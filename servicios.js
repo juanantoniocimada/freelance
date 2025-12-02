@@ -1,5 +1,13 @@
 // Array de servicios
 const servicios = [
+    {
+        titulo: '¿Tienes una idea?',
+        img: 'https://cdn-icons-png.flaticon.com/512/1828/1828926.png',
+        descripcion: '',
+        items: [
+            "¿Crees que tienes una idea de app que pueda revolucionar el mercado? Te podemos guiar en el proceso a nivel técnico"
+        ]
+    },
 
     {
         titulo: 'Aplicaciones iOS y Android',
@@ -9,7 +17,7 @@ const servicios = [
             "notificaciones a usuarios",
             "áreas privadas",
             "integración con mapas y geolocalización",
-            "pasarelas de pago"
+            "integracion con sistemas de pago / qr / nfc",
         ]
     },
     {
@@ -28,13 +36,13 @@ const servicios = [
         img: 'https://revistabyte.es/wp-content/uploads/2023/11/modelo-ovhcloud-servidores-1024x683.jpg',
         descripcion: 'Te ayudamos a que tu infraestructura tecnológica acompañe el crecimiento de tu empresa sin problemas.',
         items: [
-            "te atyudamos a elegir proveedores cloud/hosting",
+            "te ayudamos a elegir proveedores cloud/hosting",
             "¿picos de tráfico? escalabilidad automática",
         ]
     },
     {
         titulo: 'Optimización y Mentoring de Equipos',
-        img: 'https://cdn-icons-png.flaticon.com/512/1051/1051277.png',
+        img: 'https://media.istockphoto.com/id/1264379078/es/vector/lightbulb-idea-idea-concepto-ilustraci%C3%B3n-vectorial-dibujos-animados-planas-diminutos.jpg?s=612x612&w=0&k=20&c=3f-RgPD-iP8uVRa11JWzBYnDY64dtB4Ld6muMhNNukc=',
         descripcion: 'Analizamos y mejoramos la estructura y funcionamiento de tus equipos de desarrollo para que trabajen de forma más eficiente.',
         items: [
             "estándares de código, mejores prácticas, flujos de trabajo",
