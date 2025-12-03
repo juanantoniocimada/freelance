@@ -72,7 +72,7 @@ const servicios = [
     },
     {
         titulo: '¿Tienes una idea?',
-        img: 'https://cdn-icons-png.flaticon.com/512/1828/1828926.png',
+        img: 'https://concepto.de/wp-content/uploads/2020/10/idea-e1603234896160.jpg',
         descripcion: 'Te podemos acompañamos en el proceso a nivel técnico',
         items: [
             "elección de tecnología",
@@ -90,41 +90,21 @@ function renderServiciosCards() {
     container.innerHTML = '';
     servicios.forEach((servicio, idx) => {
         const card = document.createElement('div');
-        card.className = 'card';
-        card.style.padding = '2rem 1.5rem';
-        card.style.background = '#fff';
-        card.style.border = '1px solid #e0e0e0';
-        card.style.boxShadow = '0 2px 8px rgba(0,0,0,0.07)';
+            card.className = 'servicio-card';
         const itemsId = `servicio-items-${idx}`;
         card.innerHTML = `
-            <img src="${servicio.img}" alt="${servicio.titulo}">
+            <div class="servicio-img-container">
+                <img src="${servicio.img}" alt="${servicio.titulo}">
+            </div>
             <h2>${servicio.titulo}</h2>
             <p>${servicio.descripcion}</p>
-            <button class="ver-mas-btn" id="ver-mas-btn-${idx}">Ver más</button>
+            <button class="ver-mas-btn" onclick="document.getElementById('${itemsId}').style.display = (document.getElementById('${itemsId}').style.display === 'none' ? 'block' : 'none')">Ver más</button>
             <ul id="${itemsId}" style="list-style:none;padding:0;margin:0 0 0.2rem 0;display:none;">
                 ${servicio.items.map(item => `
-                    <li style='margin-bottom:0.12rem;font-size:0.98rem;color:#225;font-weight:500;padding:0.4rem 0.7rem;background:#f7fafc;border-left:2px solid #b3e0ff;border-radius:0px;'>${item}</li>`).join("")}
+                    <li>${item}</li>`).join("")}
             </ul>
         `;
         container.appendChild(card);
-        // Destello al pulsar el botón
-        setTimeout(() => {
-            const btn = document.getElementById(`ver-mas-btn-${idx}`);
-            if (btn) {
-                btn.onclick = function() {
-                    const ul = document.getElementById(itemsId);
-                    const isHidden = ul.style.display === 'none';
-                    ul.style.display = isHidden ? 'block' : 'none';
-                    if (isHidden) {
-                        card.style.transition = 'background 0.4s';
-                        card.style.background = '#e0f7fa';
-                        setTimeout(() => {
-                            card.style.background = '#fff';
-                        }, 1000);
-                    }
-                };
-            }
-        }, 0);
     });
 }
 

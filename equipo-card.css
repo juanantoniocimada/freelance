@@ -1,0 +1,65 @@
+
+
+
+.client-card {
+  background: linear-gradient(120deg, var(--color-secondary) 0%, #fff 100%);
+  border-radius: 22px;
+  box-shadow: 0 4px 24px var(--color-secondary), 0 1.5px 4px rgba(0,0,0,0.07);
+  padding: 2.2rem 1.6rem 1.6rem 1.6rem;
+  width: 280px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.45s cubic-bezier(.22,.61,.36,1), box-shadow 0.45s, background 0.45s;
+  margin: 1.2rem;
+  border: 1px solid var(--color-secondary);
+  overflow: hidden;
+}
+.client-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 12px 32px var(--color-secondary), 0 3px 8px rgba(0,0,0,0.10);
+  background: linear-gradient(120deg, #fff 0%, var(--color-secondary) 100%);
+}
+.client-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+  background: var(--color-secondary);
+  padding: 7px;
+  box-shadow: 0 2px 12px var(--color-secondary);
+  transition: transform 0.32s cubic-bezier(.22,.61,.36,1);
+}
+.client-card:hover img {
+  transform: scale(1.04);
+}
+.fundador-nombre {
+  color: var(--color-tertiary);
+  font-size: 1.22rem;
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+  letter-spacing: 1.2px;
+}
+.fundador-desc {
+  color: var(--color-primary);
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.linkedin-btn {
+  color: var(--color-tertiary);
+  text-decoration: underline;
+  font-weight: 600;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0.22rem 0.7rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  transition: color 0.22s, background 0.22s;
+}
+.linkedin-btn:hover {
+  color: #fff;
+  background: var(--color-tertiary);
+}

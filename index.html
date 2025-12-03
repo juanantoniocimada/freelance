@@ -2,116 +2,143 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        FUERTESOFT - DESARROLLO DE SOFTWARE EN FUERTEVENTURA
-    </title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    FUERTESOFT - DESARROLLO DE SOFTWARE EN FUERTEVENTURA
+  </title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="valores-card.css">
+  <link rel="stylesheet" href="equipo-card.css">
+  <link rel="stylesheet" href="servicios-card.css">
+  <link rel="stylesheet" href="experiencia-section.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <span style="display:flex;align-items:center;gap:10px;">
+  <nav class="navbar" id="main-navbar">
+    <div class="navbar-logo">fuertesoft</div>
+    <div class="navbar-buttons">
+      <a href="#home-section"><button><i class="fa-solid fa-house"></i> Home</button></a>
+      <a href="#quienes-section"><button><i class="fa-solid fa-users"></i> Quiénes somos</button></a>
+      <a href="#experiencia-section"><button><i class="fa-solid fa-briefcase"></i> Experiencia</button></a>
+      <a href="#valores-section"><button><i class="fa-solid fa-lightbulb"></i> Cómo trabajamos</button></a>
+    </div>
+  </nav>
 
-                <span id="empresa-nombre-navbar" class="empresa-nombre-navbar" style="margin-left:4px;"></span>
+  <h1>
+    DESARROLLO DE SOFTWARE
+  </h1>
 
-            </span> 
-        </div>
-        <div class="navbar-buttons">
-            <a href="#home-section"><button>Home</button></a>
-            <a href="#quienes-section"><button>Quiénes somos</button></a>
-            <a href="#experiencia-section"><button>Experiencia</button></a>
-            <a href="#valores-section"><button>Cómo trabajamos</button></a>
-        </div>
-    </nav>
-    
-    <div class="spacer-navbar"></div>
+  <section id="quienes-section" class="section-divisor">
+    <div class="section-divisor-header">
+      <hr class="section-divisor-hr">
+      <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
+      <h3>Nuestra experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
+        independiente nacida en Fuerteventura.</h3>
+    </div>
+    <div class="section-container" id="equipo-cards"></div>
+  </section>
 
-    <section id="quienes-section" class="section-divisor">
-        <div class="section-divisor-header">
+  <section id="home-section" class="section-divisor">
+    <div class="section-divisor-header">
+      <hr class="section-divisor-hr">
+      <h2 class="section-divisor-title">HOME</h2>
+      <h3>
+        aa
+      </h3>
+    </div>
+    <div class="section-container" id="servicios-cards"></div>
+  </section>
+
+  <section id="valores-section" class="section-divisor">
+    <div class="section-divisor-header">
+      <hr class="section-divisor-hr">
+      <h2 class="section-divisor-title">Cómo trabajamos</h2>
+      <h3>El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos
+        juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir
+        sobre algo real.</h3>
+    </div>
+    <div class="section-container" id="valores-cards"></div>
+  </section>
+
+  <section id="experiencia-section" class="section-divisor">
+    <div class="section-divisor-header">
+      <hr class="section-divisor-hr">
+      <h2 class="section-divisor-title">EXPERIENCIA</h2>
+      <h3>
+        Hemos trabajado con clientes de diversos sectores, desde startups tecnológicas hasta empresas consolidadas,
+        desarrollando soluciones que van desde aplicaciones móviles hasta sistemas empresariales complejos.
+      </h3>
+    </div>
+    <div class="section-container" id="clientes-cards"></div>
+  </section>
+
+
+  <footer class="footer">
+
+    <div>
+      AV JUAN DE BETHENCOURT EDI ARNAU-A 83 2 B
+    </div>
+    <div>
+      35600 - Puerto del Rosario (Las Palmas)
+    </div>
+    <div>
+      Teléfono: 608 345 295
+    </div>
+    <div>
+      Email: juanantonio.cimada@gmail.com
+    </div>
+  
+  </footer>
+
+  <script src="clientes.js"></script>
+  <script src="servicios.js"></script>
+  <script src="equipo.js"></script>
+  <script src="valores.js"></script>
+
+  <script>
+    const secciones = [
+      { id: 'home-section', icon: 'fa-house', nombre: 'Servicios', descripcion: 'aa' },
+      { id: 'quienes-section', icon: 'fa-users', nombre: 'Quiénes somos', descripcion: 'Nuestra experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa independiente nacida en Fuerteventura.' },
+      { id: 'experiencia-section', icon: 'fa-briefcase', nombre: 'Experiencia', descripcion: 'Hemos trabajado con clientes de diversos sectores, desde startups tecnológicas hasta empresas consolidadas, desarrollando soluciones que van desde aplicaciones móviles hasta sistemas empresariales complejos.' },
+      { id: 'valores-section', icon: 'fa-lightbulb', nombre: 'Cómo trabajamos', descripcion: 'El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.' }
+    ];
+
+    const navbarButtons = document.querySelector('.navbar-buttons');
+    navbarButtons.innerHTML = secciones.map(sec =>
+      `<a href="#${sec.id}"><button><i class="fa-solid ${sec.icon}"></i> ${sec.nombre}</button></a>`
+    ).join('');
+
+    secciones.forEach(sec => {
+      const section = document.getElementById(sec.id);
+      if (section) {
+        const header = section.querySelector('.section-divisor-header');
+        if (header) {
+          header.innerHTML = `
             <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
-            <h3>Nuestra experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa independiente nacida en Fuerteventura.</h3>
-        </div>
-        <div class="section-container" id="equipo-cards"></div>
-    </section>
+            <h2 class="section-divisor-title"><i class="fa-solid ${sec.icon}"></i> ${sec.nombre}</h2>
+            <h3>${sec.descripcion}</h3>
+          `;
+        }
+      }
+    });
 
-    <section id="home-section" class="section-divisor">
-        <div class="section-divisor-header">
-            <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">HOME</h2>
-        </div>
-        <div class="section-container" id="servicios-cards"></div>
-    </section>
+    // Calcular altura real del navbar y ajustar el padding-top del body
+    function ajustarPaddingNavbar() {
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        const altura = navbar.offsetHeight;
+        document.body.style.paddingTop = altura + 'px';
+      }
+    }
+    window.addEventListener('DOMContentLoaded', ajustarPaddingNavbar);
+    window.addEventListener('resize', ajustarPaddingNavbar);
+  </script>
 
-    <section id="valores-section" class="section-divisor">
-        <div class="section-divisor-header">
-            <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">Cómo trabajamos</h2>
-                        <h3>El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.</h3>
-        </div>
-        <div class="section-container" id="valores-cards"></div>
-    </section>
-
-    <section id="experiencia-section" class="section-divisor">
-        <div class="section-divisor-header">
-            <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title">EXPERIENCIA</h2>
-        </div>
-        <div class="section-container" id="clientes-cards"></div>
-    </section>
-
-
-    <footer class="footer">
-        <div class="footer-row" style="justify-content:space-between; width:100%;">
-            <div style="display:flex;align-items:center;gap:1.2rem;">
-                <span id="empresa-nombre-footer" class="footer-company"></span>
-            </div>
-            <div class="footer-address" style="text-align:right;font-size:0.98rem;color:#e6faff;max-width:320px;">
-                <div class="footer-contact" style="margin-bottom:0.7rem; text-align:left;">
-                    <strong style="font-size:1.08rem;color:#b3e0ff;letter-spacing:1px;">Contacto</strong><br>
-
-                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
-                        <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Dirección"
-                            style="width:18px;height:18px;vertical-align:middle;"> AV JUAN DE BETHENCOURT EDI ARNAU-A 83
-                        2 B
-                    </span>
-                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
-                        <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Ciudad"
-                            style="width:18px;height:18px;vertical-align:middle;"> 35600 - Puerto del Rosario (Las
-                        Palmas)
-                    </span>
-                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
-                        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Teléfono"
-                            style="width:18px;height:18px;vertical-align:middle;"> <a href="tel:608345295"
-                            style="color:#b3e0ff;text-decoration:none;">608 345 295</a>
-                    </span>
-                    <span style="display:flex;align-items:center;gap:7px;margin:4px 0;">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"
-                            style="width:18px;height:18px;vertical-align:middle;"> <a
-                            href="mailto:juanantonio.cimada@gmail.com"
-                            style="color:#b3e0ff;text-decoration:underline;">juanantonio.cimada@gmail.com</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="clientes.js"></script>
-    <script src="servicios.js"></script>
-    <script src="equipo.js"></script>
-    <script src="valores.js"></script>
-    <script>
-
-        // Nombre de la empresa centralizado
-        const EMPRESA_NOMBRE = "fuertesoft";
-        document.getElementById("empresa-nombre-navbar").textContent = EMPRESA_NOMBRE;
-        document.getElementById("empresa-nombre-footer").textContent = EMPRESA_NOMBRE;
-
-    </script>
 </body>
 
 </html>
