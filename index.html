@@ -2,143 +2,319 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    FUERTESOFT - DESARROLLO DE SOFTWARE EN FUERTEVENTURA
-  </title>
-  <link rel="stylesheet" href="styles.css">
-
-  <link rel="stylesheet" href="valores-card.css">
-  <link rel="stylesheet" href="equipo-card.css">
-  <link rel="stylesheet" href="servicios-card.css">
-  <link rel="stylesheet" href="experiencia-section.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fuertesoft | Desarrollo de Software en Fuerteventura, Canarias</title>
+    <meta name="description"
+        content="fuertesoft: expertos en desarrollo de software, aplicaciones móviles y soluciones tecnológicas en Fuerteventura y Canarias.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Navbar -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Principal">
+            <a class="brand" href="#intro" aria-label="Inicio">
+                <span class="brand-mark">•</span>
+                <span class="brand-name">fuertesoft</span>
+            </a>
 
-  <nav class="navbar" id="main-navbar">
-    <div class="navbar-logo">fuertesoft</div>
-    <div class="navbar-buttons">
-      <a href="#home-section"><button><i class="fa-solid fa-house"></i> Home</button></a>
-      <a href="#quienes-section"><button><i class="fa-solid fa-users"></i> Quiénes somos</button></a>
-      <a href="#experiencia-section"><button><i class="fa-solid fa-briefcase"></i> Experiencia</button></a>
-      <a href="#valores-section"><button><i class="fa-solid fa-lightbulb"></i> Cómo trabajamos</button></a>
-    </div>
-  </nav>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-  <h1>
-    DESARROLLO DE SOFTWARE
-  </h1>
+            <div class="nav-items" role="navigation">
+                <ul class="nav-links">
 
-  <section id="quienes-section" class="section-divisor">
-    <div class="section-divisor-header">
-      <hr class="section-divisor-hr">
-      <h2 class="section-divisor-title">QUIÉNES SOMOS</h2>
-      <h3>Nuestra experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa
-        independiente nacida en Fuerteventura.</h3>
-    </div>
-    <div class="section-container" id="equipo-cards"></div>
-  </section>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#quienes-somos">Quiénes somos</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+                </ul>
+                <a class="cta" href="#contacto">Contactar</a>
+            </div>
+        </nav>
+    </header>
 
-  <section id="home-section" class="section-divisor">
-    <div class="section-divisor-header">
-      <hr class="section-divisor-hr">
-      <h2 class="section-divisor-title">HOME</h2>
-      <h3>
-        aa
-      </h3>
-    </div>
-    <div class="section-container" id="servicios-cards"></div>
-  </section>
+    <!-- Hero / Intro -->
+    <main>
+        <section id="intro">
+            <h1 class="intro-title">
+                Desarrollo de software, aplicaciones móviles y plataformas web.
+            </h1>
+        </section>
 
-  <section id="valores-section" class="section-divisor">
-    <div class="section-divisor-header">
-      <hr class="section-divisor-hr">
-      <h2 class="section-divisor-title">Cómo trabajamos</h2>
-      <h3>El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos
-        juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir
-        sobre algo real.</h3>
-    </div>
-    <div class="section-container" id="valores-cards"></div>
-  </section>
+        <!-- Quiénes somos -->
+        <section id="quienes-somos">
+            <h2>Quiénes somos</h2>
 
-  <section id="experiencia-section" class="section-divisor">
-    <div class="section-divisor-header">
-      <hr class="section-divisor-hr">
-      <h2 class="section-divisor-title">EXPERIENCIA</h2>
-      <h3>
-        Hemos trabajado con clientes de diversos sectores, desde startups tecnológicas hasta empresas consolidadas,
-        desarrollando soluciones que van desde aplicaciones móviles hasta sistemas empresariales complejos.
-      </h3>
-    </div>
-    <div class="section-container" id="clientes-cards"></div>
-  </section>
+            <p>después de una larga trayectoria trabajando con los clientes más exigentes tecnicamente, iniciamos una
+                nueva etapa: un proyecto con nuestro sello y nuestra propia forma de hacer las cosas.</p>
 
+            <p>la experiencia en el sector también nos ha permitido tener colaboradores para cualquier solución.</p>
 
-  <footer class="footer">
+            <p>sabemos dónde falla el proveedor de software convencional y los pasos que hay que seguir para evitarlo.
+            </p>
 
-    <div>
-      AV JUAN DE BETHENCOURT EDI ARNAU-A 83 2 B
-    </div>
-    <div>
-      35600 - Puerto del Rosario (Las Palmas)
-    </div>
-    <div>
-      Teléfono: 608 345 295
-    </div>
-    <div>
-      Email: juanantonio.cimada@gmail.com
-    </div>
-  
-  </footer>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-media member-photo member-juan" aria-hidden="true"></div>
+                        <div>
+                            <div class="card-title">Juan Antonio Durán</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Software Architect and Lead APP
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" target="_blank" href="https://www.linkedin.com/in/juanantoniomkt/"
+                            rel="noopener">LinkedIn</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-media member-photo member-javi" aria-hidden="true"></div>
+                        <div>
+                            <div class="card-title">Javier Illesca</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Fullstack Developer</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" target="_blank" href="https://es.linkedin.com/in/jjavier-illesca"
+                            rel="noopener">LinkedIn</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-  <script src="clientes.js"></script>
-  <script src="servicios.js"></script>
-  <script src="equipo.js"></script>
-  <script src="valores.js"></script>
+        <!-- Servicios -->
+        <section id="servicios">
+            <h2>Servicios</h2>
 
-  <script>
-    const secciones = [
-      { id: 'home-section', icon: 'fa-house', nombre: 'Servicios', descripcion: 'aa' },
-      { id: 'quienes-section', icon: 'fa-users', nombre: 'Quiénes somos', descripcion: 'Nuestra experiencia nos ha convertido en grandes profesionales. Ahora, iniciamos una nueva etapa: una empresa independiente nacida en Fuerteventura.' },
-      { id: 'experiencia-section', icon: 'fa-briefcase', nombre: 'Experiencia', descripcion: 'Hemos trabajado con clientes de diversos sectores, desde startups tecnológicas hasta empresas consolidadas, desarrollando soluciones que van desde aplicaciones móviles hasta sistemas empresariales complejos.' },
-      { id: 'valores-section', icon: 'fa-lightbulb', nombre: 'Cómo trabajamos', descripcion: 'El primer paso es sencillo: hablamos, te escuchamos y vemos si conectamos. Si hay buen feeling, definimos juntos los detalles y arrancamos con una primera fase mínima, para poner los cimientos y empezar a construir sobre algo real.' }
-    ];
+            <div class="cards">
+                <article class="card">
+                    <div class="card-header service-bg app-bg">
+                        <div>
+                            <div class="card-title">
+                                Aplicaciones móviles
+                            </div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android.
+                        </p>
+                    </div>
+                    <!--
+            <div class="card-footer">
+                <a class="btn btn-primary service-more" href="#" data-service="apps" rel="noopener">Ver más</a>
+            </div>
+          -->
+                </article>
 
-    const navbarButtons = document.querySelector('.navbar-buttons');
-    navbarButtons.innerHTML = secciones.map(sec =>
-      `<a href="#${sec.id}"><button><i class="fa-solid ${sec.icon}"></i> ${sec.nombre}</button></a>`
-    ).join('');
+                <article class="card">
+                    <div class="card-header service-bg ide-bg">
+                        <div>
+                            <div class="card-title">llevamos tu idea a la realidad</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>desde tu cabeza hasta el lanzamiento del software en todas las plataformas para todo el mundo
+                        </p>
+                    </div>
+                    <!--
+          <div class="card-footer">
+            <a class="btn btn-primary service-more" href="#" data-service="idea" rel="noopener">Ver más</a>
+          </div>
+          -->
+                </article>
+            </div>
+        </section>
 
-    secciones.forEach(sec => {
-      const section = document.getElementById(sec.id);
-      if (section) {
-        const header = section.querySelector('.section-divisor-header');
-        if (header) {
-          header.innerHTML = `
-            <hr class="section-divisor-hr">
-            <h2 class="section-divisor-title"><i class="fa-solid ${sec.icon}"></i> ${sec.nombre}</h2>
-            <h3>${sec.descripcion}</h3>
-          `;
-        }
-      }
-    });
+        <!-- Modal Servicios -->
+        <div id="service-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="service-modal-title"
+            aria-modal="true">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content" role="document">
+                <button type="button" class="modal-close" aria-label="Cerrar">×</button>
+                <h3 id="service-modal-title">Servicio</h3>
+                <div id="service-modal-body">
+                    <p>Detalle del servicio seleccionado. Podemos añadir aquí el contenido específico de cada servicio.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    // Calcular altura real del navbar y ajustar el padding-top del body
-    function ajustarPaddingNavbar() {
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
-        const altura = navbar.offsetHeight;
-        document.body.style.paddingTop = altura + 'px';
-      }
-    }
-    window.addEventListener('DOMContentLoaded', ajustarPaddingNavbar);
-    window.addEventListener('resize', ajustarPaddingNavbar);
-  </script>
+        <!-- Cómo trabajamos -->
+        <section id="como-trabajamos">
+            <h2>Cómo trabajamos</h2>
 
+            <p>1. escuchamos el problema para identificar la necesidad</p>
+            <p>2. proponemos una solución y la consensuamos con el cliente</p>
+            <p>3. Definimos objetivos y mejoramos el producto de forma iterativa.</p>
+
+            <ul>
+                <li>
+                    <h3>Decisiones humanas</h3>
+                </li>
+                <li>
+                    <h3>Impacto social</h3>
+                </li>
+                <li>
+                    <h3>Cercanía</h3>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Experiencia -->
+        <section id="experiencia">
+            <h2>Experiencia</h2>
+            <p>Hemos trabajado con clientes de diversos sectores, desde startups tecnológicas hasta empresas
+                consolidadas, desarrollando soluciones que van desde aplicaciones móviles hasta sistemas empresariales
+                complejos.</p>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-header">
+                        <img class="card-media logo-img"
+                            src="https://e7.pngegg.com/pngimages/512/702/png-clipart-santander-bank-santander-group-santander-securities-llc-bank-text-logo-thumbnail.png"
+                            alt="Santander logo" />
+                        <div>
+                            <div class="card-title">Santander</div>
+                            <div class="card-subtitle">Santander logo</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Para Santander hemos desarrollado, entre otros ejemplos: un chat corporativo para la
+                            documentación interna de ejecutivos, un lector OCR que optimiza la detección de errores en
+                            documentos PDF escaneados, y una solución integral para la gestión de la junta anual de
+                            inversores y accionistas, alineada con los estándares de eficiencia y seguridad del sector
+                            financiero.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <img class="card-media logo-img"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKEUDXKYCwaOYk9ZoOmB2k9sD0cmRSvTP5DLHoUpxwD2TRbcqoCEOPfoDEgz-2EKNYwA_6bw2o7ly_m3b186rJDCHpqhQeJDruV37gdYNqsoyNluWcKhV1VuXdICXFNxJWfm9E7rGVdi0/s640/logo+repsol+nuevo.jpg"
+                            alt="Repsol logo" />
+                        <div>
+                            <div class="card-title">Repsol</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Se desarrolló, entre otros ejemplos, un software que ayuda a organizar y controlar todo el
+                            trabajo que se hace cuando una refinería de Repsol se detiene para mantenimiento.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <img class="card-media logo-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtezznU_jVR9aLxxoGiGKPIuHKZhfGGuuqhg&s"
+                            alt="Orange logo" />
+                        <div>
+                            <div class="card-title">Orange</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Participamos, entre otros ejemplos, en la evolución y mejora de la aplicación móvil de
+                            Jazztel (marca propiedad de Orange), una app con millones de descargas y premiada como mejor
+                            app de telefonía a nivel nacional, optimizando funcionalidades y experiencia de usuario para
+                            Orange.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <img class="card-media logo-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUtNIzRpzgCP-LG0xpfuDwA_alyeCv4mUPuw&s"
+                            alt="Orange logo" />
+                        <div>
+                            <div class="card-title">IBM</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Hemos colaborado con IBM en diversos proyectos para el sector energético y bancario,
+                            aportando soluciones tecnológicas adaptadas a las necesidades de grandes corporaciones.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <img class="card-media logo-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzWqaH_4gwb5gCRmVMSdv7W1Nc9hWL6bekmQ&s"
+                            alt="Orange logo" />
+                        <div>
+                            <div class="card-title">Colvema</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Desarrollamos, entre otros ejemplos, de forma íntegra la app móvil para iOS y Android del
+                            Colegio de Veterinarios de Madrid, cubriendo todo el ciclo de desarrollo, desde el diseño
+                            hasta la publicación en tiendas. Lo hicimos a través de WebsDirect.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <img class="card-media logo-img" src="https://cdn.worldvectorlogo.com/logos/heineken-4.svg"
+                            alt="Orange logo" />
+                        <div>
+                            <div class="card-title">Heineken</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Desarrollamos, entre otros ejemplos, un software para la gestión integral de suministros a
+                            establecimientos en todo el territorio.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+
+                        <img class="card-media logo-img"
+                            src="https://lh3.googleusercontent.com/gaJGAHniJ4pzUtRZ08iFquFB4SEdRai36Trux0J5JBb6JIGxMuGWZd8_e7gMZ8XRKICS"
+                            alt="Orange logo" />
+                        <div>
+                            <div class="card-title">Fuerteguagua</div>
+                            <div class="card-subtitle"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>App de guaguas de Fuerteventura. Permite consultar horarios y rutas, facilitando la movilidad
+                            en la isla.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <address>
+            <p>AV JUAN DE BETHENCOURT EDI ARNAU-A 83 2 B</p>
+            <p>35600 - Puerto del Rosario (Las Palmas)</p>
+            <p>Teléfono: 608 345 295</p>
+            <p>Email: <a href="mailto:juanantonio.cimada@gmail.com">juanantonio.cimada@gmail.com</a></p>
+        </address>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
